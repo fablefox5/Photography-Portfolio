@@ -12,48 +12,83 @@ body {
     --color-primary: #E1C67A;
     --color-secondary: #F1E4C1;
     --color-primary-dt:#40371e;
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    --color-pop: rgb(255, 67, 67);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* font-family:Georgia, 'Times New Roman', Times, serif; */
     color: var(--font-color-lt);
-    background-color: var(--color-bg-dt);
+    /* background-color: var(--color-bg-dt); */
 }
 
 .top-nav {
     display:flex;
     justify-content: right;
     align-items: center;
+    border-width: 0px 0px 1px 0px;
+    border-style: solid;
+    border-color: var(--color-primary-dt);
 
     
 }
 
 .nav-list {
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .nav-list > li {
-    border: 1px solid var(--color-bg-dt);
-    background-color: var(--color-bg-dt);
-    padding-top: 7%;
+    /* border: 1px solid var(--color-bg-dt); */
+    /* background-color: var(--color-bg-dt); */
+
+
+    /* padding-top: 7%;
     padding-bottom: 7%;
     padding-left: 60%;
-    padding-right: 60%;
-    text-align: center;
-    font-weight: 500;
-    transition: background-color 0.25s;
+    padding-right: 60%; */
+    /* text-align: center; */
+    /* font-weight: 500; */
+    height: 50px;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    border-color: var(--color-primary-dt);
+    border-width: 0px 0px 0px 1px;
+    border-style: solid;
+    transition: background-color 0.3s, color 0.4s, border-color 0.3s;
     /* margin-left: 50%; */
+}
+ 
+.nav-list > li:last-child {
+    /* backdrop-filter: brightness(100%) blur(10px); */
+    color: var(--color-pop);
+    backdrop-filter: blur(10px) brightness(80%);
+}
+
+@media (max-width:1325px) {
+    .nav-list >li:last-child {
+        /* backdrop-filter: brightness(100%) blur(10px); */
+        color: var(--font-color-lt);
+    }
+}
+
+.nav-list > li > a {
+    height: 100%;
+    padding: 0px 7vw;
+    display: flex;
+    align-items: center;
+    font-weight:700;
 }
 
 .nav-list > li:hover {
-    border: 1px solid var(--color-secondary);
-    background-color: var(--color-secondary);
-    
-    transition: background-color 0.25s;
+    background-color: var(--color-primary-dt);
+    color:var(--font-color-dt);
+    transition: background-color 0.3s, color 0.4s, border-color 0.3s;
     /* margin-left: 50%; */
 }
 
 .logo-initials {
     margin-right:auto;
     margin-left: 1%;
+    z-index: 10;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
@@ -63,6 +98,12 @@ ul {
 
 .hero-section {
     position: relative;
+    background-image: url("/images/bannerv2.jpg");
+    background-size:cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
 }
 
 .banner {
@@ -73,30 +114,36 @@ ul {
 
 .hero-section > .view-albums {
     position: absolute;
-    top: 70%;
-    left: 12%;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 1;
 
-    border-radius: 5px;
+    border-radius: 2px 2px 2px 2px;
     padding:1%;
-    width: 10%;
-    background-color: var(--color-primary);
-    border-color: var(--color-primary);
-    border-style: outset;
+    width: 20%;
+    /* background-color: var(--color-primary); */
+    background-color: transparent;
+    backdrop-filter: blur(2px);
+    border-color: var(--font-color-lt);
+    /* border-style: outset; */
+    border-style: solid;
+    /* border: 1px solid var(--font-color-lt); */
+    color: #cecdcc;
     transition: background-color 0.25s, border-color 0.25s, color 0.3s;
 }
 
 .hero-section > .view-albums:hover {
     background-color: var(--color-primary-dt);
     border-color: var(--color-primary-dt);
-    color: var(--font-color-dt);
+    color:var(--font-color-dt);
     transition: background-color 0.25s, color 0.3s;
 }
 
 .hero-section > .personal-text {
     position: absolute;
     top: 20%;
-    left: 60%;
+    left: 10%;
     z-index: 1;
     padding:1%;
     width: xxx-large;
