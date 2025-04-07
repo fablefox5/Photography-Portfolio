@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+
+body {
+    --color-bg-dt: #ccbc8e;
+    --font-color-dt: #FFFFFF;
+    --font-color-lt: #111111;
+    --color-primary: #E1C67A;
+    --color-secondary: #F1E4C1;
+    --color-primary-dt:#40371e;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: var(--font-color-lt);
+    background-color: var(--color-bg-dt);
+}
+
+.top-nav {
+    display:flex;
+    justify-content: right;
+    align-items: center;
+
+    
+}
+
+.nav-list {
+    display: flex;
+    justify-content: right;
+}
+
+.nav-list > li {
+    border: 1px solid var(--color-bg-dt);
+    background-color: var(--color-bg-dt);
+    padding-top: 7%;
+    padding-bottom: 7%;
+    padding-left: 60%;
+    padding-right: 60%;
+    text-align: center;
+    font-weight: 500;
+    transition: background-color 0.25s;
+    /* margin-left: 50%; */
+}
+
+.nav-list > li:hover {
+    border: 1px solid var(--color-secondary);
+    background-color: var(--color-secondary);
+    
+    transition: background-color 0.25s;
+    /* margin-left: 50%; */
+}
+
+.logo-initials {
+    margin-right:auto;
+    margin-left: 1%;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+ul {
+    list-style-type: none;
+}
+
+.hero-section {
+    position: relative;
+}
+
+.banner {
+    width: 100%;
+    height: auto;
+    z-index: -999;
+}
+
+.hero-section > .view-albums {
+    position: absolute;
+    top: 70%;
+    left: 12%;
+    z-index: 1;
+
+    border-radius: 5px;
+    padding:1%;
+    width: 10%;
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    border-style: outset;
+    transition: background-color 0.25s, border-color 0.25s, color 0.3s;
+}
+
+.hero-section > .view-albums:hover {
+    background-color: var(--color-primary-dt);
+    border-color: var(--color-primary-dt);
+    color: var(--font-color-dt);
+    transition: background-color 0.25s, color 0.3s;
+}
+
+.hero-section > .personal-text {
+    position: absolute;
+    top: 20%;
+    left: 60%;
+    z-index: 1;
+    padding:1%;
+    width: xxx-large;
+    color: var(--font-color-lt)
+    /* transform: translate(-50%, -50%); */
+}
+
+#personal-name {
+    font-size: xxx-large;
+}
+
+#personal-title {
+    font-size: x-large;
+    text-align: right;
+}
+
+
+
