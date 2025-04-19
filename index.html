@@ -5,24 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photography Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=MonteCarlo&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="index.js" defer></script>
 </head>
 <body>
-    <section class="hero-section">
+    <section class="hero-section" id="home">
         <header>
             <nav class="top-nav">
                 <h1 class="logo-initials">AG</h1>
                 <ul class="nav-list">
                     <li>
-                        <a>Home</a>
+                        <a href="#home">Home</a>
                     </li>
                     <li>
-                        <a>Albums</a>
+                        <a href="#album-directory">Albums</a>
                     </li>
                     <li>
-                        <a>About</a>
+                        <a href="#about-section">About</a>
                     </li>
                     <li>
-                        <a>Contact</a>
+                        <a href="contact-section">Contact</a>
                     </li>
                 </ul>
             </nav>
@@ -32,17 +36,114 @@
             <h1 id="personal-name">Andrew Goldstein</h1>
             <h2 id="personal-title">Photography Enthusiast</h2>
         </div>
-        <button class="view-albums">View Albums</button>
+        <button class="view-albums">Explore</button>
     </section>
     
     <section class="quote-4-grid">
+        <h2>Every Picture Tells a Story</h2>
         <div class="image-grid">
-            <img src="">
-            <img src="">
-            <img src="">
-            <img src="">
+            <img src="images/_DSC0159.jpg" id="4-grid-img-1">
+            <img src="images/_DSC0637.jpg" id="4-grid-img-2">
+            <img src="images/_DSC0646.jpg" id="4-grid-img-3">
+            <img src="images/_DSC1038.jpg" id="4-grid-img-4">
         </div>
-        <h2>quote here</h2>
+    </section>
+
+    <section class="album-directory" id="album-directory">
+        <h2>Albums</h2>
+        <section class="album-cards-container">
+            
+            <div class="album-label-card">
+                <h3>Biltmore</h3>
+                <div class="album-content-container">
+                    <div class="slider-container">
+                        <div class="image-slider">
+                            <img id="slide-1" src="images/_DSC0159.jpg" alt="Photography">
+                            <img id="slide-2" src="images/_DSC0159.jpg" alt="Photography">
+                            <img id="slide-3" src="images/_DSC0159.jpg" alt="Photography">
+                        </div>
+                        <nav class="slider-nav">
+                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+            <div class="album-label-card">
+                <h3>Mountains</h3>
+                <div class="album-content-container">
+                    <div class="slider-container">
+                        <div class="image-slider">
+                            <img id="slide-1" src="images/_DSC0159.jpg" alt="Photography">
+                            <img id="slide-2" src="images/_DSC0159.jpg" alt="Photography">
+                            <img id="slide-3" src="images/_DSC0159.jpg" alt="Photography">
+                        </div>
+                        <nav class="slider-nav">
+                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="album-label-card">
+                <h3>Time</h3>
+                <div class="album-content-container">
+                    <div class="slider-container">
+                        <div class="image-slider">
+                            <img id="slide-1" src="images/_DSC0159.jpg" alt="Photography">
+                            <img id="slide-2" src="images/_DSC0159.jpg" alt="Photography">
+                            <img id="slide-3" src="images/_DSC0159.jpg" alt="Photography">
+                        </div>
+                        <nav class="slider-nav">
+                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="album-label-card">
+                <h3>Blossom</h3>
+                <div class="album-content-container">
+                    <div class="slider-container">
+                        <div class="image-slider">
+                            <img id="slide-1" src="images/_DSC0159.jpg" alt="Photography">
+                            <img id="slide-2" src="images/_DSC0159.jpg" alt="Photography">
+                            <img id="slide-3" src="images/_DSC0159.jpg" alt="Photography">
+                        </div>
+                        <div class="slider-nav">
+                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- dot navigation (circles) -->
+            <div id="dot-nav">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+
+        </section>
+    </section>
+
+    <section class="about-section" id="about-section">
+        <h2>About Me</h2>
+        <div class="about-container">
+            <img src="/images/_DSC0579_l.jpg"
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel adipisci rem rerum numquam obcaecati perspiciatis odio fugiat quod minima at quia aliquid quis earum, quo amet doloribus maiores recusandae iste!</p>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact-section">
+        <h2>Contact</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel adipisci rem rerum numquam obcaecati perspiciatis odio fugiat quod minima at quia aliquid quis earum, quo amet doloribus maiores recusandae iste!</p>
     </section>
 </body>
 </html>
